@@ -34,8 +34,8 @@ config.exchangeRates.exchanges.BTC.EUR = 'bitstamp';  // BTC/EUR pair, supported
 config.exchangeRates.exchanges.BTC.PLN = 'bitmarket'; // BTC/PLN pair, supported: bitmarket
 
 // Market watcher
-config.marketWatcher.enabled = false; // Market watcher support (true - enabled, false - disabled)
-config.marketWatcher.exchanges.poloniex = true; // Poloniex exchange support (true - enabled, false - disabled)
+config.marketWatcher.enabled = true; // Market watcher support (true - enabled, false - disabled)
+config.marketWatcher.exchanges.poloniex = false; // Poloniex exchange support (true - enabled, false - disabled)
 config.marketWatcher.exchanges.bittrex  = true; // Bittrex exchange support (true - enabled, false - disabled)
 config.marketWatcher.candles.updateInterval = 30000; // Interval in ms for updating candlestick data (default: 30 seconds)
 config.marketWatcher.orders.updateInterval  = 15000;  // Interval in ms for updating order book data (default: 15 seconds)
