@@ -11,7 +11,12 @@ module.exports = function (grunt) {
 
         async.series([
             function (callback) {
-                var poloniex = new candles.poloniex(client);
+                // Skip exchange if not enabled
+                if (!config.marketWatcher.exchanges.poloniex) {
+                    return callback(null);
+                }
+
+                var poloniex = new candles.poloniex(client, config.marketWatcher.candles.poloniex);
 
                 poloniex.buildCandles(function (err, res) {
                     if (err) {
@@ -22,6 +27,11 @@ module.exports = function (grunt) {
                 });
             },
             function (callback) {
+                // Skip exchange if not enabled
+                if (!config.marketWatcher.exchanges.bittrex) {
+                    return callback(null);
+                }
+
                 var bittrex = new candles.bittrex(client);
 
                 bittrex.buildCandles(function (err, res) {
@@ -48,6 +58,11 @@ module.exports = function (grunt) {
 
         async.series([
             function (callback) {
+                // Skip exchange if not enabled
+                if (!config.marketWatcher.exchanges.poloniex) {
+                    return callback(null);
+                }
+
                 var poloniex = new candles.poloniex(client);
 
                 poloniex.updateCandles(function (err, res) {
@@ -59,6 +74,11 @@ module.exports = function (grunt) {
                 });
             },
             function (callback) {
+                // Skip exchange if not enabled
+                if (!config.marketWatcher.exchanges.bittrex) {
+                    return callback(null);
+                }
+
                 var bittrex = new candles.bittrex(client);
 
                 bittrex.updateCandles(function (err, res) {
