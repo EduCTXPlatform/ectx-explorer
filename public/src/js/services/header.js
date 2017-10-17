@@ -2,7 +2,7 @@
 
 var Header = function ($rootScope) {
     $rootScope.currency = {
-      symbol: 'ARK'
+      symbol: 'ECTX'
     };
 
     this.updateBlockStatus = function (res) {
@@ -24,9 +24,9 @@ var Header = function ($rootScope) {
         }
 
         // When ticker for user-stored currency is not available - switch to ARK temporarly
-        if ($rootScope.currency.symbol !== 'ARK' && (!$rootScope.currency.tickers || !$rootScope.currency.tickers.ARK || !$rootScope.currency.tickers.ARK[$rootScope.currency.symbol])) {
-            console.log ('Currency ' + $rootScope.currency.symbol + ' not available, fallback to ARK');
-            $rootScope.currency.symbol = 'ARK';
+        if ($rootScope.currency.symbol !== 'ECTX' && (!$rootScope.currency.tickers || !$rootScope.currency.tickers.ECTX || !$rootScope.currency.tickers.ECTX[$rootScope.currency.symbol])) {
+            console.log ('Currency ' + $rootScope.currency.symbol + ' not available, fallback to ECTX');
+            $rootScope.currency.symbol = 'ECTX';
         }
     };
 

@@ -10,7 +10,7 @@ config.port = 6040;      // Port to listen on
 
 // ARK node
 config.ark.host = '127.0.0.1';
-config.ark.port = 4001;
+config.ark.port = 20000;
 
 // FreeGeoIP server
 config.freegeoip.host = '127.0.0.1';
@@ -27,8 +27,8 @@ config.cacheTTL = 20; // Time in seconds to store cache in Redis
 config.exchangeRates.enabled = false;         // Exchange rates support (true - enabled, false - disabled)
 config.exchangeRates.updateInterval = 30000; // Interval in ms for checking exchange rates (default: 30 seconds)
 // Configuration for different currency pairs, set false to disable pair
-config.exchangeRates.exchanges.ARK.BTC = 'poloniex';  // ARK/BTC pair, supported: poloniex
-config.exchangeRates.exchanges.ARK.CNY = 'jubi';      // ARK/CNY pair, supported: jubi, bitbays
+config.exchangeRates.exchanges.ECTX.BTC = 'poloniex';  // ARK/BTC pair, supported: poloniex
+config.exchangeRates.exchanges.ECTX.CNY = 'jubi';      // ARK/CNY pair, supported: jubi, bitbays
 config.exchangeRates.exchanges.BTC.USD = 'bitfinex';  // BTC/USD pair, supported: bitfinex, bitstamp, btce
 config.exchangeRates.exchanges.BTC.EUR = 'bitstamp';  // BTC/EUR pair, supported: bitstamp, bitmarket
 config.exchangeRates.exchanges.BTC.PLN = 'bitmarket'; // BTC/PLN pair, supported: bitmarket
